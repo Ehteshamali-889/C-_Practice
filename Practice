@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    
+
+
+    public class Practice
+    {
+       
+        static void Main(string[] args)
+        {   
+
+            String s=Console.ReadLine();
+            try
+            {
+                Int32.Parse(s);
+                Console.WriteLine("You must enter valid 32 bit integer "+s);
+            }
+            catch (FormatException fe)
+            {   
+                //Displays Exception with error message
+                throw new ArgumentException("Error:Invalid Format",fe);
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Error:Can not be stored");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            
+        }
+        
+    }
+}
