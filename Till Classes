@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    public class Rectangle
+    {
+        double length;
+        double width;
+        private string name;
+
+        public void SetName(string n)
+        {
+            name = n;
+        }
+        public string GetName()
+        {
+            return name;
+        }
+        public void Acceptdetails()
+        {
+            Console.WriteLine("Write Length");
+            length = Convert.ToDouble(Console.ReadLine());
+            width = 3.0;
+        }
+        public double GetArea()
+        {
+            return length*width;
+        }
+        public void Display()
+        {
+            Console.WriteLine("Length:{0}",length);
+            Console.WriteLine("Width:{0}",width);
+            Console.WriteLine("Length:{0}",GetArea());
+        }
+    }
+
+    public class Practice
+    {
+        static void Main(string[] args)
+        {
+            Rectangle r1 = new Rectangle();
+            r1.SetName("ali");
+            //string name=r1.GetName();
+            //Console.WriteLine(name);
+            //r1.Acceptdetails();
+            //r1.Display();
+            int[] array = { 1, 2, 3 };
+            for(int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            char[] word = { 'a', 'b', 'c', 'd' };
+            string greetings = new string(word);
+            Console.WriteLine(greetings);
+            
+        }
+        
+    }
+}
