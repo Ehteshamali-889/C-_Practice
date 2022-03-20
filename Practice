@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    enum Season { SP,FA};
+    enum Gender { Male,Female};
+
+    struct RegNo
+    {
+        private Season season;
+        private Gender gender;
+
+        public RegNo(Season s,Gender g)
+        {
+            season = s;
+            gender = g;
+        }
+        public override string ToString()
+        {
+            return this.season+"-"+this.gender;
+        }
+    }
+
+
+    public class Practice
+    {
+        static void Main(string[] args)
+        {
+            RegNo reg = new RegNo(Season.SP,Gender.Male);
+            string data=reg.ToString();
+            Console.WriteLine(data);
+            
+        }
+        
+    }
+}
